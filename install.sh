@@ -34,6 +34,9 @@ fi
 echo "Cloning..."
 git clone git@github.com:a10y/nvim-config.git $CONFIG_DIR
 
+# Run :PlugInstall
+nvim +PlugInstall +qall
+
 echo "Done!"
 echo "Start vim and run :PlugInstall to get up and running!"
 
