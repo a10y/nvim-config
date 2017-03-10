@@ -13,6 +13,7 @@ Plug 'eagletmt/neco-ghc'
 
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
@@ -38,7 +39,7 @@ set listchars=trail:•,extends:#,precedes:<,nbsp:•,tab:→\
 set fillchars=vert:\ ,fold:-
 
 "set background=light
-colorscheme monokai-phoenix
+colorscheme glacier
 let g:solarized_termcolors=256
 " let g:seoul256_background = 233 " Darkest
 "colorscheme nord
