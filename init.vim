@@ -38,8 +38,7 @@ set list
 set listchars=trail:•,extends:#,precedes:<,nbsp:•,tab:→\ 
 set fillchars=vert:\ ,fold:-
 
-"set background=light
-colorscheme glacier
+colorscheme argonaut
 let g:solarized_termcolors=256
 " let g:seoul256_background = 233 " Darkest
 "colorscheme nord
