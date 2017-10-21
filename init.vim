@@ -2,17 +2,21 @@
 """ Copyright Andrew Duffy 2017
 
 set nocompatible
+set mouse=a
 filetype off
 
 """ Plugins
 call plug#begin()
+Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/unite.vim'                   " buffer
 Plug 'Shougo/vimfiler.vim'                " file explorer
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'             " git show diffs
 Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 Plug 'autozimu/LanguageClient-neovim'
+Plug 'brendonrapp/smyck-vim'
 Plug 'bronson/vim-trailing-whitespace'    " :FixWhiteSpace
 Plug 'ctrlpvim/ctrlp.vim'                 " fuzzy search
 Plug 'derekwyatt/vim-scala', { 'for': ['scala', 'sbt.scala'] }
@@ -24,7 +28,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'            " alignment plugin select => enter <num> space
 Plug 'leafgarland/typescript-vim'         " typescript syntax
-Plug 'majutsushi/tagbar'
 Plug 'mhartington/oceanic-next'           " oceanic theme
 Plug 'othree/html5.vim'                   " html5 syntax
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
@@ -55,8 +58,13 @@ endif
 " Theme
 syntax enable
 "colorscheme OceanicNext
-set background=dark
-colorscheme material-theme
+"set background=dark
+"colorscheme material-theme
+" Nord settings
+let g:nord_italic_comments = 1
+"colorscheme nord
+"colorscheme argonaut
+colorscheme smyck
 
 filetype plugin indent on
 
@@ -100,6 +108,7 @@ noremap ¬ <C-\><C-n><C-w>l
 """"""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
 let g:airline_theme='oceanicnext'
+let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
 
 
@@ -213,8 +222,8 @@ nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
 " Normalnavigation on wrapped lines
-map j gj
-map k gk
+"map j gj
+"map k gk
 
 " Set tab rules
 set smarttab
