@@ -7,7 +7,6 @@ filetype off
 
 """ Plugins
 call plug#begin()
-Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/unite.vim'                   " buffer
 Plug 'Shougo/vimfiler.vim'                " file explorer
@@ -16,6 +15,7 @@ Plug 'airblade/vim-gitgutter'             " git show diffs
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 Plug 'autozimu/LanguageClient-neovim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'brendonrapp/smyck-vim'
 Plug 'bronson/vim-trailing-whitespace'    " :FixWhiteSpace
 Plug 'ctrlpvim/ctrlp.vim'                 " fuzzy search
@@ -28,6 +28,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'            " alignment plugin select => enter <num> space
 Plug 'leafgarland/typescript-vim'         " typescript syntax
+Plug 'majutsushi/tagbar'
 Plug 'mhartington/oceanic-next'           " oceanic theme
 Plug 'othree/html5.vim'                   " html5 syntax
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
@@ -61,10 +62,12 @@ syntax enable
 "set background=dark
 "colorscheme material-theme
 " Nord settings
-let g:nord_italic_comments = 1
+"let g:nord_italic_comments = 1
 "colorscheme nord
 "colorscheme argonaut
-colorscheme smyck
+"colorscheme smyck
+let ayucolor="dark"
+colorscheme ayu
 
 filetype plugin indent on
 
@@ -107,8 +110,7 @@ noremap ¬ <C-\><C-n><C-w>l
 "  Airline
 """"""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
-let g:airline_theme='oceanicnext'
-let g:airline_theme='nord'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 
 
@@ -254,3 +256,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Enable markdown syntax in md files
 au BufRead,BufNewFile *.md set filetype=markdown
+
+set fillchars=vert:\ 
+hi VertSplit guibg=bg guifg=bg
